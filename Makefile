@@ -34,7 +34,7 @@ output.txt: cache-test calculate
 	./calculate
 
 plot: output.txt
-	gnuplot scripts/runtime.gp
+	gnuplot scripts/runtime.gp && eog runtime.png
 
 calculate: calculate.c
 	$(CC) $(CFLAGS_common) $^ -o $@
